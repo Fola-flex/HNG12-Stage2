@@ -104,11 +104,11 @@ const DetailsForm = () => {
                         </div>
                     </div>
                 </div>
-                {errors.name && <p>{errors.name.message}</p>}
+                {errors.file && <p className="error">{errors.file.message}</p>}
                 <div className="form_fields">
                     <label htmlFor="name">Enter your name</label>
                     <input {...register("name", { required: "Please put in your name" })} type="text" id="name" name="name" />
-                    {errors.name && <p>{errors.name.message}</p>}
+                    {errors.name && <p className="error">{errors.name.message}</p>}
                 </div>
                 <div className="form_fields">
                     <label htmlFor="email">Enter your email*</label>
@@ -116,18 +116,18 @@ const DetailsForm = () => {
                         <input {...register("email", { required: "Please put in your email" })} id="email" type="email" name="email" />
                         <img src={mail} alt="Mail icon" />
                     </div>
-                    {errors.email && <p>{errors.email.message}</p>}
+                    {errors.email && <p className="error">{errors.email.message}</p>}
                 </div>
                 <div className="form_fields">
                     <label htmlFor="textarea">About the project</label>
                     <textarea
-                        {...register("textarea", { required: "Please put in your email" })}
+                        {...register("textarea", { required: "This field is required" })}
                         type="textarea"
                         name="textarea"
                         id="textarea"
                         placeholder="About project"
                     ></textarea>
-                    {errors.textarea && <p>{errors.textarea.message}</p>}
+                    {errors.textarea && <p className="error">{errors.textarea.message}</p>}
                 </div>
                 <div className="form_details_buttons">
                     <FormButton

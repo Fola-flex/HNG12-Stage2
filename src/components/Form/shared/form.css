@@ -53,11 +53,17 @@
 
 
 .form_fieldset .form_fields option,
-.form_fieldset .form_fields select {
+.form_fieldset .form_fields select,
+.error {
     font-family: var(--sec-font);
     font-weight: var(--pri-font-weight);
     font-size: var(--sec-font-size);
     line-height: var(--sec-line-height);
+}
+
+.error {
+    color: red;    
+    font-weight: 700;
 }
 
 @media screen and (max-width: 480px) {

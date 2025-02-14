@@ -71,7 +71,7 @@ const SelectionForm = () => {
                         </div>
                     </div>                        
                 </div>  
-                {errors.radio && <p>{errors.radio.message}</p>}                  
+                {errors.radio && <p className='error'>{errors.radio.message}</p>}                  
             </div>
             <div className='form_fields'>
                 <label htmlFor='select_ticket'>Number of Tickets</label>
@@ -80,7 +80,7 @@ const SelectionForm = () => {
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
-                {errors.option && <p>{errors.option.message}</p>}
+                {errors.option && <p className='error'>{errors.option.message}</p>}
             </div>
             <div className='form_fields_buttons'>
                 <FormButton 

@@ -10,6 +10,7 @@ const DetailsForm = () => {
     const { handlePreviousStep, handleNextStep } = useContext(StepContext);    
     const fileInputRef = useRef(null);
     const { register, setValue, watch, handleSubmit, formState: { errors } } = useFormContext();
+    
     const file = watch("file");
     const filePreview = watch("filePreview"); 
 

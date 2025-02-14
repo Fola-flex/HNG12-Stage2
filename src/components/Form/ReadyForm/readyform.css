@@ -1,0 +1,67 @@
+.ready_fieldset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: none;
+    outline: none;  
+}
+
+.ready_fieldset .form_heading_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;    
+}
+
+.ready_fieldset .form_heading_info h1 {    
+    font-family: 'Alatsi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.ready_fieldset .form_heading_info p {
+    font-family: var(--sec-font);
+    font-weight: var(--pri-font-weight);
+    font-size: var(--sec-font-size);
+    line-height: var(--pri-line-height);
+    text-align: center;
+    color: var(--sec-text-color);
+}
+
+.ready_fieldset .form_ticket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.3125rem;
+    gap: 0.625rem;
+    border-radius: 24px;    
+}
+
+.ready_fieldset .form_ticket > div { 
+    width: 100%;
+    height: 10.3125rem;
+}
+ 
+@media screen and (max-width: 480px) { 
+    .ready_fieldset {
+        padding: 1.5rem;
+        gap: 2rem;
+        background: #08252B;
+        border: 1px solid #0E464F;
+        border-radius: 32px;
+    }
+
+    .ready_fieldset .form_ticket {
+        padding: 0;
+        height: 99.58px;
+    }
+    
+}

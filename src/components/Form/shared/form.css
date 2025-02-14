@@ -1,0 +1,70 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    background: #041E23;
+    border: 1px solid #0E464F;
+    border-radius: 40px;
+    width: 100%;
+    color: white;
+}
+
+.form_fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 2rem;
+    background: #08252B;
+    border: 1px solid #0E464F;
+    border-radius: 32px;
+}
+
+.form_fieldset .form_fields label {
+    font-family: var(--sec-font);
+    font-weight: var(--pri-font-weight);
+    font-size: var(--sec-font-size);
+    line-height: var(--sec-line-height);
+    color: var(--sec-text-color);
+}
+
+.form_fieldset .form_fields select,
+.form_fieldset .form_fields input,
+.form_fieldset .form_fields textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid #07373F;
+    border-radius: 12px;
+    color: white;
+}
+
+.form_fieldset .form_fields textarea {
+    height: 7.9375rem;
+}
+
+
+.form_fieldset .form_fields option,
+.form_fieldset .form_fields select {
+    font-family: var(--sec-font);
+    font-weight: var(--pri-font-weight);
+    font-size: var(--sec-font-size);
+    line-height: var(--sec-line-height);
+}
+
+@media screen and (max-width: 480px) {
+    .form {
+        background: transparent;
+        padding: 1.25rem;
+        border: none;
+        border-radius: 0px;
+    }
+}

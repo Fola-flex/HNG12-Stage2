@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+@font-face {
+    font-family: JejuMyeongjo;
+    src: url(./assets/fonts/JejuMyeongjo-Regular.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-font-size: 32px;
+    --pri-font-weight: 300;
+    --pri-font: 'JejuMyeongjo';
+    --pri-line-height: 32px;
+    --sec-font-size: 16px;
+    --sec-font: 'Roboto';
+    --sec-line-height: 150%;
+    --sec-text-color: #FAFAFA;
+}
+
+body {    
+    height: 100%;
+    background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.2) 0%, rgba(36, 160, 181, 0) 100%), #02191D;
+}

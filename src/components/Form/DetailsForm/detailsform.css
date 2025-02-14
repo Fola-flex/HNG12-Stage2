@@ -1,0 +1,115 @@
+.form_details_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form_image_upload {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 2rem;
+    background: #052228;
+    border: 1px solid #07373F;
+    border-radius: 24px;
+}
+
+.image_upload_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.image_upload_container .image_dropbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 240px;
+    height: 240px;
+    background: #0E464F;
+    border-radius: 32px;
+    cursor: pointer;
+    position: relative;
+}
+
+.image_upload_container .image_upload_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.image_upload_container .user_avatar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
+.image_upload_container .image_dropbox .user_avatar:hover  {
+    opacity: 0.2;
+}
+
+.image_upload_container .image_dropbox .user_avatar:hover .image_upload_text  {
+    position: absolute;
+}
+
+.form_fields .image_upload_container .file {
+    display: none;
+}
+
+.image_upload_container .image_dropbox p,
+.email_container #email,
+.form_fields input,
+.form_fields textarea,
+textarea::placeholder {
+    font-family: var(--sec-font);
+    font-weight: var(--pri-font-weight);
+    font-size: var(--sec-font-size);
+    line-height: var(--sec-line-height);    
+    color: var(--sec-text-color);
+}
+
+.image_upload_container .image_dropbox p {
+    text-align: center;
+}
+
+.form_details_buttons button {
+    width: 100%;    
+}
+
+.email_container {
+    width: 100%;
+    position: relative;
+}
+
+.email_container #email {
+    padding-left: 3rem;
+    color: white;
+}
+
+.email_container img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+textarea::placeholder {
+    color: #AAAAAA;
+}

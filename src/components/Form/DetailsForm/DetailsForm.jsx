@@ -9,7 +9,8 @@ import { useFormContext } from "react-hook-form";
 const DetailsForm = () => {    
     const { handlePreviousStep, handleNextStep } = useContext(StepContext);    
     const fileInputRef = useRef(null);
-    const { register, setValue, watch, handleSubmit, formState: { errors } } = useFormContext();
+    const { register, setValue, watch, getValues, handleSubmit, formState: { errors } } = useFormContext();
+    const [isDragging, setIsDragging] = useState(false);
     
     const file = watch("file");
     const filePreview = watch("filePreview"); 

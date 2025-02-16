@@ -6,3 +6,8 @@ export { default as ticket_reg } from "./ticket_reg.png";
 export { default as download } from "./download_icon.png";
 export { default as mail } from "./mail_icon.png";
 export { default as down_arrow } from "./down_arrow_icon.png";
+export { default as sec } from "./sec.png";
+export { default as reg } from "./reg.png";
+export { default as vip } from "./vip.png";
+export { default as vvip } from "./vvip.png";
+export { default as b_line} from "./b_line.png";

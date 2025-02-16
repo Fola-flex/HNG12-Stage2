@@ -1,12 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import "./readyform.css";
 import "../shared/form.css";
 import { FormButton, FormTitle } from '../shared';
-import { ticket, ticket_reg } from '../../../assets';
+import { reg, vip, vvip } from '../../../assets';
 import { StepContext } from '../../../Context';
+import { useFormContext } from 'react-hook-form';
+import Ticket from '../../Ticket/Ticket';
 
 const ReadyForm = () => {
+     const { getValues,handleSubmit } = useFormContext();
+     console.log(getValues("radio"))
+     const avatar = getValues("filePreview");
+     const ticketType = getValues("radio")
     const { handlePreviousStep, handleNextStep } = useContext(StepContext)
+    
   return (
     <>        
         <div className='show_header '>
@@ -19,11 +26,10 @@ const ReadyForm = () => {
             <div className='form_heading_info'>
                 <h1>Your Ticket is Booked!</h1>
                 <p>You can download or check your email for a copy</p>                    
-            </div>
+            </div>            
             <div className='form_ticket'>
-                <div style={{background: `url(${ticket}), url(${ticket_reg})`, backgroundSize: '100% 100%, 100% 100%'}}>
-
-                </div>
+                {ticketType === 'regular' ? <Ticket avatar={avatar} type={reg} /> : ticketType === 'vip' ? <Ticket avatar={avatar} type={vip} /> : <Ticket avatar={avatar} type={vvip} />}
+                            
             </div>                
             <div className='form_fields_buttons'>
                 <FormButton 
@@ -36,7 +42,9 @@ const ReadyForm = () => {
                     background="#24A0B5" 
                     color="#FFFFFF" 
                     text="Download Ticket" 
-                    handleClick={handleNextStep} 
+                    handleClick={handleSubmit((data) => {
+                        console.log("Form Data:", data);
+                        handleNextStep();} )} 
                 />
             </div>
         </fieldset>        
